@@ -6,7 +6,7 @@ from sqlalchemy.orm import sessionmaker, Session
 class Model:
     base = declarative_base()
     engine = create_engine("sqlite:///rank.db")
-    session: Session = sessionmaker(bind=engine)()
+    session = sessionmaker(bind=engine)()
 
 
 def init_db():
