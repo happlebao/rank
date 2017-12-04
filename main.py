@@ -30,10 +30,10 @@ def main():
     for i, u in enumerate(us):
         # if len(u.contribution) > 0 and u.login not in u.contribution[0].repository.name_with_owner:
         formatted = 'user star:'
-        formatted += f'{i:3} {u.login:15} {int(u.star):5} '
+        formatted += '{i:3} {u.login:15} {int(u.star):5} '
         for c in u.contribution[:3]:
             r = c.repository
-            formatted += f'{r.name_with_owner:40} {r.language:12} {int(c.count):5} '
+            formatted += '{r.name_with_owner:40} {r.language:12} {int(c.count):5} '
         log(formatted)
 
 
